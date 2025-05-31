@@ -1,4 +1,6 @@
 # Tugas Akhir Matakuliah Pemrosesan Citra Digital
+## Topik: Corner Detection 
+
 ## Disusun oleh:
   - Christopher Bernard Suryanto / 71220833
   - Ricardo Yan Augusto / 71220865
