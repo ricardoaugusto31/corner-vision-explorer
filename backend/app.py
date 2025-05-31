@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, send_file
+from flask_cors import CORS
 import cv2
 import numpy as np
 import tempfile
@@ -10,12 +11,11 @@ from methods.HitorMissCorner import detect_hitormiss
 from methods.ShiTomasiCorner import detect_shitomasi
 
 app = Flask(__name__)
+CORS(app)
+
 @app.route("/")
 def home():
     return jsonify({"message": "Flask server is running!"})
-
-if __name__ == "__main__":
-    app.run(debug=True)
     
 methods_map = {
     "contour": detect_contour,
@@ -47,3 +47,5 @@ def process_image():
 
     return send_file(tmp_file.name, mimetype='image/png')
 
+if __name__ == "__main__":
+    app.run(debug=True)
