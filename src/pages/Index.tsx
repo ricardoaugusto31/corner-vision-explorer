@@ -127,15 +127,15 @@ const MainInterface = ({ onBack }: { onBack: () => void }) => {
   return (
     <div className="min-h-screen">
       <div className="container mx-auto px-6 py-8">
-        <div className="flex items-center justify-between mb-8 bg-white/80 backdrop-blur rounded-2xl shadow p-4">
+        <div className="relative items-center justify-between mb-8 bg-white/80 backdrop-blur rounded-2xl shadow p-4">
           <Button 
             onClick={onBack}
             variant="outline"
-            className="hover:bg-indigo-50 border-indigo-200"
+            className="absolute left-6 top-1/2 transform -translate-y-1/2 hover:bg-indigo-50 border-indigo-200"
           >
             ← Back to Home
           </Button>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="w-full text-center text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
             Corner Detection Lab
           </h1>
           <div></div>
